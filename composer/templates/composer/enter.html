@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'composer/style.css' %}" />
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+        <h1>Specify Human Needs<br></h1>
+        <form method = "POST" >
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input type="submit" id = "submitButton" value="Submit" />
+        </form>
+
+
+</body>
+</html>
